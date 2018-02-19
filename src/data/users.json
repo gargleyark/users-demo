@@ -1,0 +1,9 @@
+{
+  "users": [
+    {
+      "name": "Bob",
+      "title": "Archaeologist",
+      "skills": ["javascript", "html"]
+    }
+  ]
+}
