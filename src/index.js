@@ -1,14 +1,16 @@
 const express = require('express')
-const app = express()
-const fs = require('fs')
+const server = express()
 const App = require('./js/app.js')
+var path = require('path')
+const app = new App()
+server.use(express.static(path.join(__dirname, '/public')))
 
-app.get('/', (req, res) => {
-  app.use(express.static(__dirname + '/public'))
-  const app = new App()
-  res.send(app.render({
-    data: jeffs
-  }))
+server.get('/profile/', (req, res) => {
+  res.send(app.render('profile', req.query.id))
 })
 
-app.listen(9001)
+server.get('/', (req, res) => {
+  res.send(app.render('index'))
+})
+
+server.listen(9001)

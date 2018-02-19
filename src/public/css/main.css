@@ -1,0 +1,54 @@
+body {
+    background: #ffffff;
+}
+#h1-container {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+h1 {
+    color: red;
+    font-weight: 800;
+    font-size: 3em;
+}
+
+h2 {
+    color: #ffffff;
+    text-transform: uppercase;
+}
+h2 {
+    margin-bottom: 10px;
+}
+.box-container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.andi-card {
+    width: 45%;
+    height: 200px;
+    border-radius: 5px;
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f90c00+0,e29300+100 */
+    background: #f90c00; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #f90c00 0%, #e29300 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #f90c00 0%,#e29300 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #f90c00 0%,#e29300 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f90c00', endColorstr='#e29300',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        display: inline-block;
+    padding: 20px;
+    margin: 10px;
+}
+.and-title {
+    color: #ffffff;
+    margin-top: 0;
+}
+
+/* Result page */
+
+.list {
+    background-color: #e5e5e5;
+}
+
+.box-container:nth-child(odd) {
+    background-color: #eeeeee;
+}
