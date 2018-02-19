@@ -1,9 +1,33 @@
 {
   "users": [
     {
-      "name": "Bob",
-      "title": "Archaeologist",
-      "skills": ["javascript", "html"]
+      "id": "1",
+      "name": "Iva Bartolovic",
+      "age": "26",
+      "nationality": "Croatian",
+      "title": "Travel Enthusiast"
+    },
+    {
+      "id": "2",
+      "name": "Giovanni Toscani",
+      "age": "32",
+      "nationality": "Italian",
+      "title": "Music Composer"
+    },
+    {
+      "id": "3",
+      "name": "Mike Steel",
+      "age": "25",
+      "nationality": "English",
+      "title": "Book binder"
+    },
+    {
+      "id": "4",
+      "name": "George Delevante",
+      "age": "35",
+      "nationality": "English",
+      "title": "Coffee Snob"
     }
+
   ]
 }
