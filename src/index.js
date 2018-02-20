@@ -11,9 +11,15 @@ server.use(express.static(path.join(__dirname, '/public')))
 
 server.get('/', (req, res) => {
   if (req.query.id) {
-    res.send(app.render('profile', req.query.id))
+    app.init('profile', req.query.id).then((data) => {
+      res.send(data)
+    })
+    console.log('ran init')
   } else {
-    res.send(app.render('index'))
+    app.init('index').then((data) => {
+      res.send(data)
+    })
+    console.log('ran init 2')
   }
 })
 
