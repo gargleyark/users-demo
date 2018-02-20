@@ -1,4 +1,9 @@
+@font-face {
+  font-family: 'lineto';
+  src: url('lineto-brown-pro-regular.woff2');
+}
 body {
+    font-family: ('lineto')
     background: #ffffff;
 }
 #h1-container {
@@ -20,12 +25,36 @@ h2 {
     margin-bottom: 10px;
 }
 .box-container {
-    max-width: 80%;
+    max-width: 100%;
+    text-align: center;
     margin: 0 auto;
 }
 
+.box-container.details {
+  width: 55%;
+  margin: auto;
+  border-radius: 5px;
+  padding: 1% 15%;
+  background: #f90c00;
+  background: -moz-linear-gradient(-45deg, #f90c00 0%, #e29300 100%);
+  background: -webkit-linear-gradient(-45deg, #f90c00 0%,#e29300 100%);
+  background: linear-gradient(135deg, #f90c00 0%,#e29300 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f90c00', endColorstr='#e29300',GradientType=1 );
+}
+
+.box-container.details .list {
+  padding: 6px;
+  margin-bottom: 4px;
+  font-size: 20px;
+}
+
+.back {
+  font-size: 16px;
+  text-align: center;
+}
+
 .andi-card {
-    width: 45%;
+    width: 38%;
     height: 200px;
     border-radius: 5px;
    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f90c00+0,e29300+100 */
@@ -37,6 +66,7 @@ h2 {
         display: inline-block;
     padding: 20px;
     margin: 10px;
+    text-align: left;
 }
 .and-title {
     color: #ffffff;
