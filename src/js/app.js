@@ -6,6 +6,8 @@ const Users = require('./users.js')
 const usersComponent = new Users()
 const Details = require('./details.js')
 const detailsComponent = new Details()
+const DataModule = require('./data.js')
+const dataModule = new DataModule()
 let usersData
 // const usersData = require('../data/users.json')
 
@@ -37,34 +39,24 @@ const getUserDetails = (userId) => {
   }
 }
 
-const promise = new Promise(function(resolve, reject) {
-  MongoClient.connect(url, (err, db) => {
-    if (err) throw err
-    const dbo = db.db('users')
-    console.log('Database created!')
-    dbo.collection('users').find({}).toArray(function (err, result) {
-      if (err) throw err
-      console.log('resolving', result)
-      db.close()
-      resolve(result)
-    })
-  })
-})
-
 const config = {
   index: getUsers,
   profile: getUserDetails
 }
 
 module.exports = function () {
-  this.render = (type, id) => {
-    promise.then(function (result) {
-      usersData = result
-      console.log('after the then, the data is', usersData)
-      return app.toString()
-        .replace(/{{app}}/, config[type](id))
-    }, function (err) {
-      console.log(err)
+  this.init = (type = 'index', id) => {
+    return new Promise(function (resolve, reject) {
+      dataModule.promise.then(function (result) {
+        usersData = result
+        console.log('after the then, the data is', usersData)
+        console.log(type, id)
+        const temp = app.toString()
+          .replace(/{{app}}/, config[type](id))
+        resolve(temp)
+      }, function (err) {
+        console.log(err)
+      })
     })
   }
 }
